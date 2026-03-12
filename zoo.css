@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f3f3f1;
+  font-family: "Geologica", sans-serif;
+  color: #111;
+  overflow-x: hidden;
+}
+
+.zoo-page {
+  position: relative;
+  width: 100%;
+  min-height: 2200px;
+  padding: 60px 40px 120px;
+}
+
+
+
+.corner-magnet {
+  position: fixed;
+  top: 28px;
+  right: 28px;
+  width: 110px;
+  height: auto;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  z-index: 50;
+
+  transition: transform 0.25s ease;
+}
+
+.corner-magnet img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.corner-magnet:hover {
+  transform: translateY(-8px) rotate(-4deg);
+}
+
+
+.bg-dot {
+  position: absolute;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  background: rgba(249, 236, 170, 0.55);
+  z-index: 0;
+}
+
+.dot-1  { top: 0px; left: -10px; }
+.dot-2  { top: 120px; left: 540px; }
+.dot-3  { top: 40px; right: 120px; }
+.dot-4  { top: 240px; right: -20px; }
+.dot-5  { top: 390px; left: 250px; }
+.dot-6  { top: 500px; left: 700px; }
+.dot-7  { top: 760px; left: 410px; }
+.dot-8  { top: 960px; left: 120px; }
+.dot-9  { top: 1080px; right: 250px; }
+.dot-10 { top: 1320px; left: 520px; }
+.dot-11 { top: 1620px; left: 40px; }
+.dot-12 { top: 1850px; right: 80px; }
+
+
+.title-piece {
+  position: absolute;
+  font-size: 88px;
+  font-weight: 400;
+  line-height: 0.9;
+  color: #111;
+  z-index: 2;
+  letter-spacing: -0.03em;
+}
+
+.title-1 {
+  top: 120px;
+  left: 70px;
+}
+
+.title-2 {
+  top: 120px;
+  left: 500px;
+}
+
+.title-3 {
+top: 540px;
+  left: 880px;
+  font-size: 80px;
+}
+
+.title-4 {
+  top: 1000px;
+  left: 300px;
+  font-size: 68px;
+}
+
+
+
+.gallery {
+  position: relative;
+  width: 100%;
+  min-height: 1900px;
+  z-index: 3;
+}
+
+.photo {
+  position: absolute;
+  background: white;
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+.photo-1 {
+  width: 210px;
+  top: 128px;
+  left: 180px;
+}
+
+.photo-2 {
+  width: 240px;
+  top: 240px;
+  left: 900px;
+}
+
+.photo-3 {
+  width: 250px;
+  top: 430px;
+  left: 550px;
+}
+
+.photo-4 {
+  width: 180px;
+  top: 620px;
+  left: 80px;
+}
+
+.photo-5 {
+  width: 180px;
+  top: 760px;
+  left: 1020px;
+}
+
+.photo-6 {
+  width: 210px;
+  top: 1080px;
+  left: 920px;
+}
+
+.photo-7 {
+  width: 230px;
+  top: 1320px;
+  left: 220px;
+}
+
+.photo-8 {
+  width: 220px;
+  top: 1580px;
+  left: 760px;
+}
+
+
+
+.intro-text {
+  position: relative;
+  max-width: 460px;
+  margin-top: 500px;
+  margin-left: 70px;
+}
+
+.intro-text p {
+  font-size: 24px;
+  line-height: 1.5;
+  color: #111;
+}
+
+
+
+.photo {
+  transition: transform 0.25s ease;
+}
+
+.photo:hover {
+  transform: translateY(-4px);
+}
+
+
+
+@media (max-width: 768px) {
+  .zoo-page {
+    min-height: auto;
+    padding: 120px 20px 100px;
+  }
+
+  .corner-magnet {
+    width: 78px;
+    top: 18px;
+    right: 18px;
+  }
+
+  .title-piece {
+    position: static;
+    display: inline-block;
+    font-size: 44px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+  }
+
+  .title-1,
+  .title-2,
+  .title-3,
+  .title-4 {
+    position: static;
+  }
+
+  .gallery {
+    position: static;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 40px;
+  }
+
+  .photo {
+    position: static;
+    width: 100% !important;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .bg-dot {
+    width: 54px;
+    height: 54px;
+  }
+
+  .intro-text {
+    margin: 50px auto 0;
+    max-width: 320px;
+  }
+
+  .intro-text p {
+    font-size: 16px;
+  }
+}
