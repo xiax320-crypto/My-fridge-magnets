@@ -173,3 +173,88 @@ body {
   color:#111;
   letter-spacing:0.08em;
 }
+.magnet-van-gogh{
+  position:absolute;
+  top: 330px;
+  left: 230px;
+
+  width:95px;
+  height:95px;
+
+  border:none;
+  background:none;
+  padding:0;
+
+  cursor:pointer;
+  z-index: 8;
+
+  transition:transform .25s ease;
+}
+
+.magnet-van-gogh:hover{
+  transform:translateY(-8px) rotate(-4deg);
+}
+
+
+.frame{
+  width:100%;
+  height:100%;
+
+  background:#cfa54c;
+
+  border:3px solid #9a7424;
+
+  padding:10px;
+
+  box-shadow:
+  inset 0 0 0 3px #e8c777,
+  inset 0 0 0 6px #b8872a;
+}
+
+
+.painting{
+  width:100%;
+  height:100%;
+
+  background:#e5c875;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+
+.flower{
+  position:absolute;
+
+  width:25px;
+  height:25px;
+
+  background:#a97a1c;
+
+  border-radius:50%;
+}
+
+.f1{top:8px;left:18px;}
+.f2{top:20px;left:36px;}
+.f3{top:15px;left:50px;}
+.f4{top:35px;left:20px;}
+.f5{top:38px;left:48px;}
+.f6{top:42px;left:30px;}
+
+
+.vase{
+  position:absolute;
+
+  bottom:8px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  width:20px;
+  height:25px;
+
+  background:#d8b46d;
+
+  border-radius:3px;
+}
