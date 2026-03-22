@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #e5efef;
+  font-family: "Geologica", sans-serif;
+  color: #111;
+  overflow: hidden;
+}
+
+.hokkaido-page {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+
+.left-panel {
+  width: 52%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background: #ddd;
+}
+
+.left-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.right-panel {
+  width: 48%;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  background: #efefec;
+  padding: 28px 36px 120px;
+}
+
+
+
+
+
+.corner-magnet {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  width: 96px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  z-index: 20;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.corner-magnet img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.corner-magnet:hover {
+  transform: translateY(-8px) rotate(-4deg);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.18);
+}
+
+
+.meta {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: #111;
+  z-index: 5;
+}
+
+.top-left {
+  top: 10px;
+  left: 20px;
+}
+
+.top-right {
+  top: 10px;
+  right: 140px;
+}
+
+.bottom-left {
+  bottom: 20px;
+  left: 20px;
+}
+
+.bottom-right {
+  bottom: 20px;
+  right: 24px;
+}
+
+
+.dot {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: #a4e5f1;
+  padding: 0;
+  z-index: 4;
+  cursor: default;
+}
+
+.dot-1 {
+  top: 140px;
+  left: 90px;
+}
+
+.dot-2 {
+  top: 540px;
+  left: 400px;
+}
+
+.dot-3 {
+  top: 860px;
+  left: 310px;
+}
+
+/* =========================
+   滚动内容区
+========================= */
+
+.scroll-content {
+  position: relative;
+  min-height: 1500px;
+  margin-top: 90px;
+}
+
+/* 照片 */
+.small-photo {
+  position: absolute;
+  background: white;
+}
+
+.small-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 参考图那种不规则布局 */
+.photo-1 {
+  width: 260px;
+  top: 120px;
+  right: 80px;
+}
+
+.photo-2 {
+  width: 190px;
+  top: 360px;
+  left: 70px;
+}
+
+.photo-3 {
+  width: 190px;
+  top: 620px;
+  right: 110px;
+}
+
+.photo-4 {
+  width: 250px;
+  top: 920px;
+  left: 120px;
+}
+
+.photo-5 {
+  width: 220px;
+  top: 1220px;
+  right: 90px;
+}
+
+/* 可选：照片 hover */
+.small-photo {
+  transition: transform 0.25s ease;
+}
+
+.small-photo:hover {
+  transform: translateY(-4px);
+}
+
+/* =========================
+   响应式：平板
+========================= */
+
+@media (max-width: 1100px) {
+  .meta {
+    font-size: 16px;
+  }
+
+  .corner-magnet {
+    width: 80px;
+  }
+
+  .top-right {
+    right: 110px;
+  }
+}
+
+/* =========================
+   手机端
+========================= */
+
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+
+  .hokkaido-page {
+    display: block;
+    height: auto;
+  }
+
+  .left-panel {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+  }
+
+  .right-panel {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    min-height: 1200px;
+    padding: 100px 20px 80px;
+  }
+
+  .corner-magnet {
+    top: 18px;
+    right: 18px;
+    width: 72px;
+  }
+
+  .meta {
+    position: static;
+    display: inline-block;
+    margin-right: 18px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  .dot {
+    width: 22px;
+    height: 22px;
+  }
+
+  .dot-1,
+  .dot-2,
+  .dot-3 {
+    position: absolute;
+  }
+
+  .scroll-content {
+    min-height: auto;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .small-photo {
+    position: static;
+    width: 100% !important;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
