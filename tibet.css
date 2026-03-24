@@ -20,9 +20,9 @@ body {
 
 .corner-magnet {
   position: fixed;
-  top: 24px;
-  right: 24px;
-  width: 92px;
+  top: 30px;
+  right: 30px;
+  width: 150px;
   border: none;
   background: transparent;
   padding: 0;
@@ -111,7 +111,7 @@ body {
 }
 
 .word-2 {
-  top: 160px;
+  top: 200px;
   right: 150px;
 }
 
