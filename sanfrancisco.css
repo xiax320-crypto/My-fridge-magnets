@@ -255,3 +255,41 @@ body {
     margin: 0 auto 28px;
   }
 }
+.photo-group{
+  position: absolute;
+}
+.photo-btn{
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+.photo-btn img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.photo-note{
+  position: absolute;
+  left: 105%;
+  bottom:10px;
+
+  max-width: 220px;
+  font-size: 15px;
+  line-height: 1.4;
+
+  background: rgba(255,255,255,0.9);
+  padding: 10px 12px;
+  border-radius: 8px;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.3s;
+}
+.photo-btn:hover + .photo-note{
+  opacity: 1;
+  transform: translateY(0);
+}

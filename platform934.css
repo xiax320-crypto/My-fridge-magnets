@@ -98,7 +98,19 @@ body {
 .center-magnet:hover {
   transform: translate(-50%, calc(-50% - 8px));
 }
+.overlay-line{
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  font-size: 120px;
+  color: white;
+  transition: color 0.3s ease;
+}
 
+.overlay-line:focus{
+  color: #fbcd63;
+}
 
 @media (max-width: 1024px) {
   .overlay-line {

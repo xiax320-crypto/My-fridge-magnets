@@ -8,13 +8,11 @@ body {
   background: #f3f3f1;
   font-family: "Geologica", sans-serif;
   color: #111;
-  overflow-x: hidden;
 }
 
 .gallery-page {
   width: 100%;
-  min-height: 2200px;
-  padding: 20px;
+  height: 100%;
   position: relative;
 }
 
@@ -47,7 +45,7 @@ body {
 .composition {
   position: relative;
   width: 100%;
-  height: 980px;
+  height: 3000px;
   background: #f3f3f1;
   overflow: hidden;
 }
@@ -111,82 +109,16 @@ body {
   width: 100%;
   height: auto;
 }
-
-.tag-text {
+.block2 {
   position: absolute;
-  right: 510px;
-  bottom: 25px;
-  z-index: 8;
-
-  font-size: 18px;
-  color: #111;
-  font-weight: 400;
-}
-
-.side-photo {
-  position: absolute;
-  left: 120px;
-  bottom: 90px;
-  width: 220px;
-  z-index: 7;
-}
-
-.side-photo img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-
-.extra-section {
-  position: relative;
-  width: 100%;
-  min-height: 1000px;
-  padding: 120px 80px 120px;
-  background: #f3f3f1;
-}
-
-.extra-block {
   width: 900px;
-  left: 0px;
+  left: 100px;
+  top: 1130px;
   height: 610px;
   background: #dedeb4;
   margin-bottom: 60px;
-}
+  z-index: 10;
 
-.extra-text {
-  max-width: 560px;
-  margin-left: 320px;
-  margin-top: -180px;
-}
-
-
-
-.extra-photo {
-  position:absolute;
-  left:100px;
-  top:120px;
-  width:430px;
-
-}
-
-.extra-photo img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-
-.main-photo,
-.side-photo,
-.extra-photo {
-  transition: transform 0.25s ease;
-}
-
-.main-photo:hover,
-.side-photo:hover,
-.extra-photo:hover {
-  transform: translateY(-4px);
 }
 
 @media (max-width: 1200px) {
@@ -287,23 +219,75 @@ body {
     padding: 80px 24px;
   }
 
-  .extra-block {
-    width: 160px;
-    height: 160px;
-  }
 
-  .extra-text {
-    margin-left: 0;
-    margin-top: 20px;
-    max-width: 100%;
-  }
 
-  .extra-text p {
-    font-size: 18px;
   }
+.photo-group{
+  position: absolute;
+  z-index: 20;
+}
 
-  .extra-photo {
-    width: 220px;
-    margin-left: 0;
-  }
+.group-1{
+  right: 0px;
+  top:360px;
+  width: 500px;
+}
+
+.group-2{
+  left: 100px;
+  top: 1130px;
+  width: 430px;
+}
+
+.photo-btn{
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  transition: transform 0.25s ease;
+}
+
+.photo-btn img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.photo-btn:hover{
+  transform: translateY(-4px);
+}
+
+.photo-note{
+  position: absolute;
+  max-width: 240px;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #111;
+  background: rgba(255,255,255,0.88);
+  padding: 10px 12px;
+  border-radius: 10px;
+
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.note-1{
+  right: 520px;
+  bottom: 25px;
+  max-width: 180px;
+}
+
+.note-2{
+  left: 450px;
+  top: 40px;
+  max-width: 260px;
+}
+
+.photo-btn:hover + .photo-note{
+  opacity: 1;
+  transform: translateY(0);
 }

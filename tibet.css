@@ -88,23 +88,25 @@ body {
   display: block;
 }
 
-.word {
-  position: absolute;
-  color: #f1f1ef;
-  font-size: 28px;
-  font-weight: 300;
-  z-index: 10;
-  letter-spacing: 0.02em;
+.word{
+  position:absolute;
 
-  transition: color 0.25s ease, transform 0.25s ease;
-  cursor: pointer;
+  border:none;
+  background:transparent;
+  padding:0;
+
+  font-family: "Geologica", sans-serif;
+  font-size:28px;
+  color:rgba(255,255,255,0.95);
+
+  cursor:pointer;
+  transition:color .25s ease, transform .25s ease;
 }
-
-.word:hover{
-  color:#ffd88a;  
+.word:focus{
+  color:#ffd88a;
   transform: translateY(-3px);
+  outline:none;
 }
-
 .word-1 {
   top: 90px;
   left: 90px;

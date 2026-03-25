@@ -130,9 +130,6 @@ body {
   left: 310px;
 }
 
-/* =========================
-   滚动内容区
-========================= */
 
 .scroll-content {
   position: relative;
@@ -140,7 +137,6 @@ body {
   margin-top: 90px;
 }
 
-/* 照片 */
 .small-photo {
   position: absolute;
   background: white;
@@ -152,7 +148,6 @@ body {
   height: auto;
 }
 
-/* 参考图那种不规则布局 */
 .photo-1 {
   width: 260px;
   top: 120px;
@@ -176,25 +171,25 @@ body {
   top: 920px;
   left: 120px;
 }
+.photo-4{
+  transition: transform 0.25s ease;
+}
+.photo-4:hover {
+  transform: translateY(-4px);
+}
 
 .photo-5 {
   width: 220px;
   top: 1220px;
   right: 90px;
 }
-
-/* 可选：照片 hover */
-.small-photo {
+.photo-5 {
   transition: transform 0.25s ease;
 }
-
-.small-photo:hover {
+.photo-5:hover {
   transform: translateY(-4px);
 }
 
-/* =========================
-   响应式：平板
-========================= */
 
 @media (max-width: 1100px) {
   .meta {
@@ -209,10 +204,6 @@ body {
     right: 110px;
   }
 }
-
-/* =========================
-   手机端
-========================= */
 
 @media (max-width: 768px) {
   body {
@@ -277,4 +268,75 @@ body {
     max-width: 320px;
     margin: 0 auto;
   }
+}
+.photo-group{
+  position: absolute;
+}
+
+.group-1{
+  top: 1000px;
+  left: 150px;
+}
+
+.group-2{
+  top: 1320px;
+  left: 340px;
+}
+
+.photo-btn{
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.photo-btn img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.photo-btn-1{
+  width: 260px;
+}
+
+.photo-btn-2{
+  width: 230px;
+}
+
+.photo-btn:hover{
+  transform: translateY(-4px);
+}
+
+.photo-note{
+  position: absolute;
+  max-width: 220px;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #111;
+  background: rgba(255,255,255,0.88);
+  padding: 10px 12px;
+  border-radius: 10px;
+
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.note-1{
+  top: 30px;
+  left: 240px;
+}
+
+.note-2{
+  top: 60px;
+  left: -250px;
+}
+
+.photo-btn:hover + .photo-note{
+  opacity: 1;
+  transform: translateY(0);
 }
